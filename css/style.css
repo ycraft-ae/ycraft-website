@@ -969,6 +969,7 @@ body {
 .btn--textflow:hover { box-shadow: 0 8px 30px var(--accent-textflow-glow), 0 0 15px rgba(153, 153, 255, 0.15); transform: translateY(-2px); }
 .btn--expression { background: var(--accent-expression); color: #000; }
 .btn--expression:hover { box-shadow: 0 8px 30px var(--accent-expression-glow), 0 0 15px rgba(93, 232, 178, 0.15); transform: translateY(-2px); }
+.price-old { text-decoration: line-through; opacity: 0.5; font-size: 0.75em; }
 .btn--gumroad { background: #fff; color: #E45A9B; }
 .btn--gumroad:hover { background: #f5f5f5; box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15); transform: translateY(-2px); }
 .btn--gumroad img { height: 18px; width: auto; }
