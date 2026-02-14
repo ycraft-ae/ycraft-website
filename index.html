@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YCraft — Professional After Effects Tools</title>
+    <meta name="description" content="Professional After Effects extensions and scripts by YCraft. STRUCT for layer management, TextLab Pro for text styling, ExpressionKit for expressions. Built for real motion design workflows.">
+    <meta name="keywords" content="After Effects, extensions, scripts, CEP, motion design, layer management, text styling, expressions, AE tools, workflow, STRUCT, TextLab Pro, ExpressionKit, YCraft">
+    <meta name="author" content="YCraft">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="YCraft — Professional After Effects Tools">
+    <meta property="og:description" content="Premium extensions and scripts built for real motion design workflows. Layer management, text styling, and expression tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ycraft.dev">
+    <meta property="og:site_name" content="YCraft Tools">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ycraft.dev">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "YCraft",
+      "url": "https://ycraft.dev",
+      "description": "Professional After Effects extensions and scripts for motion designers",
+      "brand": { "@type": "Brand", "name": "YCraft" },
+      "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TextLab Pro",
+      "operatingSystem": "Windows 10+, macOS 12+",
+      "applicationCategory": "MultimediaApplication",
+      "offers": { "@type": "Offer", "price": "39.00", "priceCurrency": "USD" },
+      "description": "All-in-One Text Toolkit for After Effects with Safe Zone overlays, WCAG contrast checker, batch operations, and professional styling"
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTY65L60KV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TTY65L60KV');
+    </script>
+</head>
+<body>
+
+    <!-- Top Notification Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="top-bar__content">
+            <span class="top-bar__icon">✨</span>
+            <span class="top-bar__text">Stay updated on new tools & exclusive discounts</span>
+            <div class="top-bar__form" id="topBarForm">
+                <input type="email" class="top-bar__input" placeholder="your@email.com" id="topBarEmail" required>
+                <button type="button" class="top-bar__btn" onclick="submitTopBarEmail()">Subscribe</button>
+            </div>
+            <span class="top-bar__success" id="topBarSuccess">✓ You're in!</span>
+        </div>
+        <button class="top-bar__close" onclick="closeTopBar()">×</button>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--cyan"></div>
+    <div class="bg-glow bg-glow--purple"></div>
+    <div class="bg-glow bg-glow--magenta"></div>
+    <div class="bg-glow bg-glow--green"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <span class="nav__logo" onclick="goHome()" style="cursor:pointer;">
+            <img src="assets/images/ycraft-logo.png" alt="Y" class="nav__logo-icon">
+            <span class="nav__logo-text">Craft</span>
+            <span class="nav__logo-tag">TOOLS</span>
+        </span>
+        <!-- Home nav -->
+        <ul class="nav__links" id="navHome">
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://aescripts.com/textlab-pro/" target="_blank" class="nav__cta">Store →</a></li>
+        </ul>
+        <!-- Detail nav -->
+        <div class="nav__detail" id="navDetail">
+            <span class="nav__detail-back" onclick="goHome()" style="cursor:pointer;">← Back</span>
+            <span class="nav__detail-title" id="navDetailTitle"></span>
+            <a href="#" class="nav__detail-cta" id="navDetailCta" target="_blank">Buy Now</a>
+        </div>
+    </nav>
+
+    <!-- ══════ HOME PAGE ══════ -->
+    <div id="pg-home">
+
+    <!-- Hero -->
+    <section class="hero">
+        <!-- Background: Video -->
+        <div class="hero__bg-video-wrap">
+            <video class="hero__bg-video" autoplay muted loop playsinline>
+                <source src="assets/videos/Background.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero__fade"></div>
+        <div class="hero__fade-top"></div>
+        <!-- Left: Text -->
+        <div class="hero__left">
+            <div class="hero__brand">
+                <img src="assets/images/ycraft-logo.png" alt="Y" class="hero__brand-icon">
+                <span class="hero__brand-name">Craft</span>
+                <span class="hero__brand-tools">TOOLS</span>
+            </div>
+            <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                New — TextLab Pro is now available
+            </div>
+            <h1 class="hero__title">
+                After Effects tools<br>built for <span>real workflows</span>
+            </h1>
+            <p class="hero__subtitle">
+                Professional extensions and scripts designed to eliminate repetitive tasks and streamline your motion design pipeline.
+            </p>
+            <div class="hero__actions">
+                <a href="#products" class="btn btn--primary">Explore Tools ↓</a>
+                <a href="https://aescripts.com/textlab-pro/" target="_blank" class="btn btn--ghost btn--orange">Visit Store</a>
+            </div>
+        </div>
+
+        <!-- Right: TextLab Pro Panel Image -->
+        <div class="hero__right">
+            <div class="hero__panel-image">
+                <div class="hero__panel-glow"></div>
+                <img src="assets/images/panel-main-v2.png" alt="TextLab Pro - After Effects Text Toolkit" class="hero__panel-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats__item reveal">
+            <div class="stats__number" style="background:linear-gradient(135deg,#FF9E64,#E8D44D);-webkit-background-clip:text;background-clip:text;">2</div>
+            <div class="stats__label">Tools Available</div>
+        </div>
+        <div class="stats__item reveal">
+            <div class="stats__number" style="background:linear-gradient(135deg,#D291FF,#9999FF);-webkit-background-clip:text;background-clip:text;">AE</div>
+            <div class="stats__label">After Effects Native</div>
+        </div>
+        <div class="stats__item reveal">
+            <div class="stats__number" style="background:linear-gradient(135deg,#31A8FF,#00D4FF);-webkit-background-clip:text;background-clip:text;">CEP</div>
+            <div class="stats__label">Extension Panel</div>
+        </div>
+        <div class="stats__item reveal">
+            <div class="stats__number" style="background:linear-gradient(135deg,#FF6AC1,#FF9E64);-webkit-background-clip:text;background-clip:text;">24/7</div>
+            <div class="stats__label">License Support</div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="section-header reveal">
+            <div class="section-header__label" style="color:#FF9E64;text-shadow:0 0 20px rgba(255,158,100,0.3);">// Products</div>
+            <h2 class="section-header__title">Tools that respect <span style="background:linear-gradient(135deg,#FF9E64,#FF6AC1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">your time</span></h2>
+            <p class="section-header__desc">Each tool solves a specific pain point in the After Effects workflow — no bloat, no fluff.</p>
+        </div>
+
+        <!-- STRUCT (HIDDEN - Gumroad sales paused) -->
+        <div class="product-card product-card--struct" data-direction="left" style="display:none;">
+            <span class="product-card__type product-card__type--script">Script</span>
+            <div class="product-card__visual product-card__visual--struct">
+                <div class="product-card__icon-wrap">
+                    <div class="product-card__icon-glow" style="background: var(--accent-struct);"></div>
+                    <img src="assets/images/struct-hero.png" alt="STRUCT Panel" class="product-card__image">
+                </div>
+            </div>
+            <div class="product-card__content">
+                <div class="product-card__version">v1.2.0 — Workflow Suite</div>
+                <h3 class="product-card__name" style="color:#E8D44D;">STRUCT</h3>
+                <p class="product-card__tagline">
+                    A comprehensive workflow suite for layer management, composition cleanup, and project utilities. Keep your AE projects organized.
+                </p>
+                <ul class="product-card__features">
+                    <li>Smart layer sorting and grouping</li>
+                    <li>Batch composition cleanup</li>
+                    <li>Project-wide asset management</li>
+                    <li>Custom naming conventions</li>
+                    <li>One-click project optimization</li>
+                </ul>
+                <div class="product-card__footer">
+                    <div class="product-card__price">
+                        $25
+                        <span class="product-card__price-note">one-time</span>
+                    </div>
+                    <span class="btn btn--struct" onclick="showPage('struct')" style="cursor:pointer;">Get STRUCT →</span>
+                </div>
+                <div class="product-card__stores">
+                    <span>Available on</span>
+                    <img src="assets/images/gumroad-logo.png" alt="Gumroad">
+                </div>
+            </div>
+        </div>
+
+        <!-- TextLab Pro -->
+        <div class="product-card product-card--textflow product-card--reverse" data-direction="right">
+            <span class="product-card__type product-card__type--extension product-card__type--left">Extension</span>
+            <div class="product-card__visual product-card__visual--textflow">
+                <div class="product-card__icon-wrap">
+                    <div class="product-card__icon-glow" style="background: var(--accent-textflow);"></div>
+                    <img src="assets/images/panel-main-v2.png" alt="TextLab Pro Panel" class="product-card__image">
+                </div>
+            </div>
+            <div class="product-card__content">
+                <div class="product-card__version">v1.0 — All-in-One Text Toolkit</div>
+                <h3 class="product-card__name" style="color:#9999FF;">TextLab Pro</h3>
+                <p class="product-card__tagline">
+                    Complete text toolkit with Safe Zone overlays, WCAG contrast checker, batch operations, and professional styling. 18 features in 3 organized tabs.
+                </p>
+                <ul class="product-card__features">
+                    <li>Safe Zone Overlay for YouTube, TikTok, Instagram</li>
+                    <li>WCAG Contrast Checker & Spell Check</li>
+                    <li>Batch Sync, Outline & Per-Character Colors</li>
+                    <li>Basic Animations & FFX Preset Library</li>
+                    <li>All Comps scan with outlier detection</li>
+                </ul>
+                <div class="product-card__footer">
+                    <div class="product-card__price">
+                        $39
+                        <span class="product-card__price-note">one-time</span>
+                    </div>
+                    <span class="btn btn--textflow" onclick="showPage('textflow')" style="cursor:pointer;">Get TextLab →</span>
+                </div>
+                <div class="product-card__stores">
+                    <span>Available on</span>
+                    <img src="assets/images/aescripts-logo.png" alt="aescripts+aeplugins" class="store-logo--primary">
+                </div>
+            </div>
+        </div>
+
+        <!-- ExpressionKit -->
+        <div class="product-card product-card--expression" data-direction="left">
+            <span class="product-card__type product-card__type--extension-green">Extension</span>
+            <div class="product-card__visual product-card__visual--expression">
+                <div class="product-card__icon-wrap">
+                    <div class="product-card__icon-glow" style="background: var(--accent-expression);"></div>
+                    <div class="mockup">
+                        <div class="mockup__titlebar">
+                            <div class="mockup__titlebar-left">
+                                <div class="mockup__dot" style="background: #5DE8B2;"></div>
+                                <span class="mockup__titlebar-text">ExpressionKit</span>
+                            </div>
+                            <span class="mockup__titlebar-ver">v1.0</span>
+                        </div>
+                        <div class="mockup__tabs">
+                            <div class="mockup__tab mockup__tab--active tab-expression">Library</div>
+                            <div class="mockup__tab">Tools</div>
+                            <div class="mockup__tab">Debug</div>
+                            <div class="mockup__tab">Perf</div>
+                        </div>
+                        <div class="mockup__body">
+                            <div class="mockup-ek__search">
+                                <span class="mockup-ek__search-icon">⌕</span>
+                                <span class="mockup-ek__search-text">Search expressions...</span>
+                                <span class="mockup-ek__search-shortcut">⌘K</span>
+                            </div>
+                            <div class="mockup-ek__code">
+                                <div class="mockup-ek__line">
+                                    <span class="mockup-ek__line-num">1</span>
+                                    <span class="mockup-ek__line-code"><span class="ek-comment">// Inertial Bounce</span></span>
+                                </div>
+                                <div class="mockup-ek__line">
+                                    <span class="mockup-ek__line-num">2</span>
+                                    <span class="mockup-ek__line-code"><span class="ek-keyword">var</span> <span class="ek-var">n</span> = <span class="ek-number">0</span>, <span class="ek-var">t</span> = <span class="ek-number">0</span>;</span>
+                                </div>
+                                <div class="mockup-ek__line">
+                                    <span class="mockup-ek__line-num">3</span>
+                                    <span class="mockup-ek__line-code"><span class="ek-keyword">if</span><span class="ek-bracket">(</span><span class="ek-prop">numKeys</span> > <span class="ek-number">0</span><span class="ek-bracket">){</span></span>
+                                </div>
+                                <div class="mockup-ek__line">
+                                    <span class="mockup-ek__line-num">4</span>
+                                    <span class="mockup-ek__line-code">  <span class="ek-var">n</span> = <span class="ek-method">nearestKey</span><span class="ek-bracket">(</span><span class="ek-prop">time</span><span class="ek-bracket">)</span>.<span class="ek-prop">index</span>;</span>
+                                </div>
+                                <div class="mockup-ek__line">
+                                    <span class="mockup-ek__line-num">5</span>
+                                    <span class="mockup-ek__line-code">  <span class="ek-var">t</span> = <span class="ek-prop">time</span> - <span class="ek-method">key</span><span class="ek-bracket">(</span><span class="ek-var">n</span><span class="ek-bracket">)</span>.<span class="ek-prop">time</span>;</span>
+                                </div>
+                            </div>
+                            <div class="mockup-ek__snippet">
+                                <div class="mockup-ek__snippet-left">
+                                    <div class="mockup-ek__snippet-dot" style="background: #5DE8B2;"></div>
+                                    <span class="mockup-ek__snippet-name">Inertial Bounce</span>
+                                </div>
+                                <span class="mockup-ek__snippet-tag mockup-ek__snippet-tag--anim">Animation</span>
+                            </div>
+                            <div class="mockup-ek__snippet">
+                                <div class="mockup-ek__snippet-left">
+                                    <div class="mockup-ek__snippet-dot" style="background: #9999FF;"></div>
+                                    <span class="mockup-ek__snippet-name">Elastic Scale</span>
+                                </div>
+                                <span class="mockup-ek__snippet-tag mockup-ek__snippet-tag--transform">Transform</span>
+                            </div>
+                            <div class="mockup-ek__snippet">
+                                <div class="mockup-ek__snippet-left">
+                                    <div class="mockup-ek__snippet-dot" style="background: #E8D44D;"></div>
+                                    <span class="mockup-ek__snippet-name">Time Remap Loop</span>
+                                </div>
+                                <span class="mockup-ek__snippet-tag mockup-ek__snippet-tag--utility">Utility</span>
+                            </div>
+                        </div>
+                        <div class="mockup__footer">
+                            <div class="mockup__footer-status"><div class="mockup__footer-dot"></div> Ready</div>
+                            <span class="mockup__footer-ver">127 snippets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <div class="product-card__version">Coming Soon — Expression Toolkit</div>
+                <h3 class="product-card__name" style="color:#5DE8B2;">ExpressionKit</h3>
+                <p class="product-card__tagline">
+                    An all-in-one expression toolkit featuring snippet management, search, debugging tools, and performance analysis.
+                </p>
+                <ul class="product-card__features">
+                    <li>Expression snippet library & search</li>
+                    <li>Syntax highlighting & validation</li>
+                    <li>Real-time debugging console</li>
+                    <li>Performance profiler</li>
+                    <li>Community snippet sharing</li>
+                </ul>
+                <div class="product-card__footer">
+                    <div class="product-card__price">
+                        TBA
+                        <span class="product-card__price-note">coming soon</span>
+                    </div>
+                    <span class="btn btn--expression btn--ghost" style="border-color: rgba(93, 232, 178, 0.3); color: #000; box-shadow: 0 0 15px rgba(93, 232, 178, 0.05); cursor:default; opacity:0.7;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="section-header reveal">
+            <div class="section-header__label" style="color:#5DE8B2;text-shadow:0 0 20px rgba(93,232,178,0.3);">// Why YCraft</div>
+            <h2 class="section-header__title">Built by a <span style="background:linear-gradient(135deg,#31A8FF,#5DE8B2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">motion designer</span>,<br>for motion designers</h2>
+            <p class="section-header__desc">Every tool comes from real production pain points. No feature exists unless it saves you time.</p>
+        </div>
+        <div class="about__grid">
+            <div class="about__card reveal">
+                <div class="about__card-icon">⚡</div>
+                <div class="about__card-title" style="color:#FF9E64;">Production Ready</div>
+                <div class="about__card-desc">Battle-tested in real projects. Stable, fast, and reliable — no experimental beta nonsense.</div>
+            </div>
+            <div class="about__card reveal">
+                <div class="about__card-icon">🎯</div>
+                <div class="about__card-title" style="color:#31A8FF;">Focused Design</div>
+                <div class="about__card-desc">Each tool does one thing exceptionally well. Clean UI, zero learning curve, instant productivity.</div>
+            </div>
+            <div class="about__card reveal">
+                <div class="about__card-icon">🔄</div>
+                <div class="about__card-title" style="color:#5DE8B2;">Active Updates</div>
+                <div class="about__card-desc">Regular updates, bug fixes, and new features. Your purchase includes all future updates.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility -->
+    <section class="compat reveal">
+        <div class="section-header">
+            <div class="section-header__label" style="color:#D291FF;text-shadow:0 0 20px rgba(210,145,255,0.3);">// Compatibility</div>
+            <h2 class="section-header__title">Works with your <span style="background:linear-gradient(135deg,#D291FF,#31A8FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">setup</span></h2>
+        </div>
+        <div class="compat__grid">
+            <div class="compat__item reveal">
+                <div class="compat__icon">🎬</div>
+                <div class="compat__name">After Effects</div>
+                <div class="compat__ver">2022 and above</div>
+            </div>
+            <div class="compat__item reveal">
+                <div class="compat__icon">🖥️</div>
+                <div class="compat__name">Windows</div>
+                <div class="compat__ver">Windows 10 / 11</div>
+            </div>
+            <div class="compat__item reveal">
+                <div class="compat__icon">🍎</div>
+                <div class="compat__name">macOS</div>
+                <div class="compat__ver">Monterey 12+</div>
+            </div>
+            <div class="compat__item reveal">
+                <div class="compat__icon">📦</div>
+                <div class="compat__name">Install</div>
+                <div class="compat__ver">ZXP / Manual</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="section-header reveal">
+            <div class="section-header__label" style="color:#FF6AC1;text-shadow:0 0 20px rgba(255,106,193,0.3);">// FAQ</div>
+            <h2 class="section-header__title">Common <span style="background:linear-gradient(135deg,#FF6AC1,#FF9E64);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">questions</span></h2>
+        </div>
+
+        <div class="faq__item">
+            <button class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+                Which After Effects versions are supported?
+                <span class="faq__q-icon">+</span>
+            </button>
+            <div class="faq__a"><div class="faq__a-inner">All YCraft tools support After Effects 2022 and later, including the latest 2025 and 2026 releases. Both Windows (10/11) and macOS (Monterey 12+) are fully supported. CEP extensions run natively inside the After Effects panel system.</div></div>
+        </div>
+
+        <div class="faq__item">
+            <button class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+                How do I install the extensions?
+                <span class="faq__q-icon">+</span>
+            </button>
+            <div class="faq__a"><div class="faq__a-inner">CEP extensions can be installed via ZXP Installer (recommended) or manually. JSX scripts like STRUCT are simply copied to your ScriptUI Panels folder. Each download includes a step-by-step guide — the process takes less than 2 minutes.</div></div>
+        </div>
+
+        <div class="faq__item">
+            <button class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+                Is this a subscription or one-time purchase?
+                <span class="faq__q-icon">+</span>
+            </button>
+            <div class="faq__a"><div class="faq__a-inner">All YCraft tools are one-time purchases. Pay once, use forever. Your purchase includes all future updates and bug fixes at no additional cost.</div></div>
+        </div>
+
+        <div class="faq__item">
+            <button class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+                How many computers can I use my license on?
+                <span class="faq__q-icon">+</span>
+            </button>
+            <div class="faq__a"><div class="faq__a-inner">Each license is for a single user. You can install on your own devices, but sharing or redistributing license keys is not permitted.</div></div>
+        </div>
+
+        <div class="faq__item">
+            <button class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+                Do you offer refunds?
+                <span class="faq__q-icon">+</span>
+            </button>
+            <div class="faq__a"><div class="faq__a-inner">Yes. If you're not satisfied, contact us within 14 days of purchase and we'll process a full refund through the platform you purchased from. No questions asked.</div></div>
+        </div>
+
+        <div class="faq__item">
+            <button class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+                Can I use these tools in commercial projects?
+                <span class="faq__q-icon">+</span>
+            </button>
+            <div class="faq__a"><div class="faq__a-inner">Absolutely. All YCraft tools are licensed for both personal and commercial use. Use them in client work, broadcast, social media, film — anything you need.</div></div>
+        </div>
+    </section>
+
+    <!-- Installation Guide Link -->
+    <div class="pdf-dl reveal">
+        <span class="pdf-dl__btn" onclick="showPage('install')" style="cursor:pointer;">
+            <span class="pdf-dl__icon">📦</span>
+            Installation Guide — How to Install Extensions
+        </span>
+    </div>
+
+    <!-- Changelog -->
+    <section class="changelog">
+        <div class="section-header reveal">
+            <div class="section-header__label" style="color:#00D4FF;text-shadow:0 0 20px rgba(0,212,255,0.3);">// Changelog</div>
+            <h2 class="section-header__title">Recent <span style="background:linear-gradient(135deg,#00D4FF,#5DE8B2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">updates</span></h2>
+        </div>
+        <!-- STRUCT changelog hidden -->
+        <div class="changelog__item reveal" style="display:none;">
+            <div class="changelog__ver" style="color:#E8D44D;">v1.2.0</div>
+            <div class="changelog__date">2025</div>
+            <div class="changelog__text"><span class="changelog__tag changelog__tag--new">NEW</span> STRUCT — Added batch layer sorting, new color label presets, improved comp cleanup algorithm</div>
+        </div>
+        <div class="changelog__item reveal">
+            <div class="changelog__ver" style="color:#9999FF;">v1.0.0</div>
+            <div class="changelog__date">2025</div>
+            <div class="changelog__text"><span class="changelog__tag changelog__tag--new">NEW</span> TextLab Pro — All-in-One Text Toolkit with Safe Zone Overlay, WCAG Contrast Checker, Batch Operations, and Professional Styling</div>
+        </div>
+        <div class="changelog__item reveal" style="display:none;">
+            <div class="changelog__ver" style="color:#E8D44D;">v1.1.0</div>
+            <div class="changelog__date">2024</div>
+            <div class="changelog__text"><span class="changelog__tag changelog__tag--improve">IMPROVE</span> STRUCT — Performance improvements, AE 2025 compatibility, UI refinements</div>
+        </div>
+        <div class="changelog__item reveal" style="display:none;">
+            <div class="changelog__ver" style="color:#E8D44D;">v1.0.0</div>
+            <div class="changelog__date">2024</div>
+            <div class="changelog__text"><span class="changelog__tag changelog__tag--new">NEW</span> STRUCT — Initial release on VideoHive with layer management, comp cleanup, and asset tools</div>
+        </div>
+    </section>
+
+    <!-- Notify -->
+    <section class="notify">
+        <div class="notify__box reveal">
+            <div class="notify__title">Stay in the loop 📡</div>
+            <div class="notify__desc">Get notified about new tools, updates, and exclusive discounts. No spam, ever.</div>
+            <div class="notify__form" id="notifyForm">
+                <input type="email" class="notify__input" placeholder="your@email.com" id="notifyEmail" required>
+                <button type="button" class="notify__btn" onclick="submitNotifyEmail()">Subscribe</button>
+            </div>
+            <div id="notifyMsg" style="margin-top:12px;font-size:13px;display:none;"></div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form" id="contact">
+        <div class="contact-form__box reveal">
+            <h2 class="contact-form__title">Any <span style="background:linear-gradient(135deg,#00D4FF,#9999FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">questions</span>?</h2>
+            <p class="contact-form__desc">Drop us a message and we'll get back to you as soon as possible.</p>
+            <div class="contact-form__fields">
+                <input type="email" class="contact-form__input" placeholder="Your email" id="contactEmail" required>
+                <textarea class="contact-form__textarea" placeholder="Write your question here..." id="contactMessage" rows="4" required></textarea>
+                <button type="button" class="contact-form__btn" onclick="submitContactForm()">Send Message →</button>
+            </div>
+            <div id="contactMsg" class="contact-form__msg"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__copy">© 2026 YCraft. All rights reserved.</div>
+        <ul class="footer__links">
+            <li><a href="https://aescripts.com/textlab-pro/" target="_blank" style="color:#FF9E64;">aescripts</a></li>
+            <li><a href="mailto:hello@ycraft.dev" style="color:#FF6AC1;">Contact</a></li>
+        </ul>
+    </footer>
+    </div><!-- /pg-home -->
+
+
+    <!-- STRUCT DETAIL PAGE (HIDDEN - Gumroad sales paused) -->
+    <div id="pg-struct" class="detail-page" style="display:none !important;">
+        <section class="d-hero">
+            <div class="d-hero__content">
+                <div class="d-badge" style="color:#E8D44D;border-color:rgba(232,212,77,0.2);background:rgba(232,212,77,0.05);">
+                    <span class="d-badge__dot" style="background:#E8D44D;box-shadow:0 0 8px #E8D44D;"></span> v1.2.0 • Stable
+                </div>
+                <h1 class="d-hero__title">The <span style="color:#E8D44D;text-shadow:0 0 30px rgba(232,212,77,0.25);">Workflow Suite</span><br>for After Effects</h1>
+                <p class="d-hero__desc">Layer management, composition cleanup, and project utilities — all in one panel. Stop wasting time on repetitive tasks.</p>
+                <div class="d-hero__actions">
+                    <a href="https://ymcraft.gumroad.com/l/struct" target="_blank" class="btn btn--gumroad"><img src="assets/images/gumroad-logo.png" alt="Gumroad">Buy on Gumroad — $25</a>
+                    <span class="btn btn--ghost" onclick="document.getElementById('structVideo').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">Watch Demo ▶</span>
+                </div>
+            </div>
+            <div class="d-hero__visual">
+                <div class="d-hero__image-wrap" style="--glow-color:rgba(232,212,77,0.15);">
+                    <img src="assets/images/struct-hero.png" alt="STRUCT Panel" class="d-hero__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO SECTION -->
+        <section class="d-intro">
+            <div class="d-intro__content d-showcase__section" data-direction="center">
+                <h2 class="d-intro__title">
+                    <span class="d-intro__title-text" style="background:linear-gradient(135deg,#E8D44D 0%,#FF9E64 100%);-webkit-background-clip:text;background-clip:text;">STRUCT</span>
+                </h2>
+                <p class="d-intro__desc">The complete workflow toolkit for After Effects. Four powerful tabs to manage layers, clean compositions, organize assets, and optimize your projects.</p>
+            </div>
+        </section>
+
+        <!-- SHOWCASE - Apple Style -->
+        <section class="d-section d-section--showcase">
+            <div class="d-showcase d-showcase--struct">
+
+                <!-- Section 1: Layers Tab -->
+                <div class="d-showcase__section" data-direction="left">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/struct-layers.png" alt="Layers Tab">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge" style="background:rgba(232,212,77,0.1);border-color:rgba(232,212,77,0.25);color:#E8D44D;">Layers Tab</div>
+                        <h3 class="d-showcase__title" style="background:linear-gradient(135deg,#E8D44D,#FF9E64);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Organize your timeline</h3>
+                        <p class="d-showcase__desc">Smart layer management that understands your workflow. Sort, group, and color-code with precision.</p>
+                        <ul class="d-showcase__features">
+                            <li style="--check-bg:rgba(232,212,77,0.1);--check-color:#E8D44D;">Sort by type, name, or color label</li>
+                            <li style="--check-bg:rgba(232,212,77,0.1);--check-color:#E8D44D;">Smart grouping with auto-naming</li>
+                            <li style="--check-bg:rgba(232,212,77,0.1);--check-color:#E8D44D;">Batch select by layer type</li>
+                            <li style="--check-bg:rgba(232,212,77,0.1);--check-color:#E8D44D;">Quick visibility toggles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 2: Comps Tab -->
+                <div class="d-showcase__section" data-direction="right">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/struct-comps.png" alt="Comps Tab">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge" style="background:rgba(255,158,100,0.1);border-color:rgba(255,158,100,0.25);color:#FF9E64;">Comps Tab</div>
+                        <h3 class="d-showcase__title" style="background:linear-gradient(135deg,#FF9E64,#FF6AC1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Clean your project</h3>
+                        <p class="d-showcase__desc">Find and remove unused compositions, orphan layers, and project bloat with one click.</p>
+                        <ul class="d-showcase__features">
+                            <li style="--check-bg:rgba(255,158,100,0.1);--check-color:#FF9E64;">Find unused compositions</li>
+                            <li style="--check-bg:rgba(255,158,100,0.1);--check-color:#FF9E64;">Detect orphan precomps</li>
+                            <li style="--check-bg:rgba(255,158,100,0.1);--check-color:#FF9E64;">Bulk delete with safety checks</li>
+                            <li style="--check-bg:rgba(255,158,100,0.1);--check-color:#FF9E64;">Project size analyzer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 3: Utilities Tab -->
+                <div class="d-showcase__section" data-direction="left">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/struct-utilities.png" alt="Utilities Tab">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge" style="background:rgba(49,168,255,0.1);border-color:rgba(49,168,255,0.25);color:#31A8FF;">Utilities Tab</div>
+                        <h3 class="d-showcase__title" style="background:linear-gradient(135deg,#31A8FF,#00D4FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Debug & analyze</h3>
+                        <p class="d-showcase__desc">Manage expressions, find missing footage, and get detailed project statistics — all in one place.</p>
+                        <ul class="d-showcase__features">
+                            <li style="--check-bg:rgba(49,168,255,0.1);--check-color:#31A8FF;">Expression Manager with bulk actions</li>
+                            <li style="--check-bg:rgba(49,168,255,0.1);--check-color:#31A8FF;">Find & relink missing footage</li>
+                            <li style="--check-bg:rgba(49,168,255,0.1);--check-color:#31A8FF;">Project statistics overview</li>
+                            <li style="--check-bg:rgba(49,168,255,0.1);--check-color:#31A8FF;">Delete error expressions</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="d-section" id="structVideo">
+            <div class="d-video"><div class="d-video__play" style="border-color:rgba(232,212,77,0.3);background:rgba(232,212,77,0.08);"><span style="color:#E8D44D;font-size:24px;margin-left:3px;">▶</span></div><span class="d-video__label">VIDEO COMING SOON</span></div>
+        </section>
+
+        <section class="d-cta">
+            <div class="d-cta__box" style="--line:linear-gradient(90deg,transparent,#E8D44D,#FF9E64,transparent);">
+                <h2>Ready to organize your projects?</h2>
+                <p>One-time purchase. Free updates. No subscription.</p>
+                <div class="d-cta__price" style="color:#E8D44D;">$25 <span>USD</span></div>
+                <a href="https://ymcraft.gumroad.com/l/struct" target="_blank" class="btn btn--gumroad"><img src="assets/images/gumroad-logo.png" alt="Gumroad">Buy STRUCT on Gumroad →</a>
+            </div>
+        </section>
+
+        <!-- Installation Guide Link -->
+        <div class="d-install-link">
+            <span class="d-install-link__icon">📦</span>
+            <span class="d-install-link__text">Need help installing?</span>
+            <span class="d-install-link__btn" onclick="showPage('install')">View Installation Guide →</span>
+        </div>
+
+        <div class="d-footer"><span onclick="goHome()" style="cursor:pointer;">← Back to YCraft</span> · © 2026 YCraft</div>
+    </div>
+
+    <!-- TEXTLAB PRO DETAIL PAGE -->
+    <div id="pg-textflow" class="detail-page" style="display:none;">
+        <section class="d-hero">
+            <div class="d-hero__content">
+                <div class="d-badge" style="color:#9999FF;border-color:rgba(153,153,255,0.2);background:rgba(153,153,255,0.05);">
+                    <span class="d-badge__dot" style="background:#9999FF;box-shadow:0 0 8px #9999FF;"></span> v1.0 • Available
+                </div>
+                <h1 class="d-hero__title">The all-in-one<br><span style="color:#9999FF;text-shadow:0 0 30px rgba(153,153,255,0.25);">text toolkit</span></h1>
+                <p class="d-hero__desc">Quality control, batch operations, and creative styling — everything you need to manage text layers in After Effects. Three powerful tabs, one panel.</p>
+                <div class="d-hero__actions">
+                    <a href="https://aescripts.com/textlab-pro/" target="_blank" class="btn btn--aescripts btn--aescripts-primary btn--sale"><span class="sale-badge">SALE</span><img src="assets/images/aescripts-logo.png" alt="aescripts">Buy on aescripts</a>
+                                    </div>
+            </div>
+            <div class="d-hero__visual">
+                <div class="d-hero__image-wrap d-hero__image-wrap--alpha">
+                    <img src="assets/images/textlab-hero-3d.png" alt="TextLab Pro" class="d-hero__image d-hero__image--alpha">
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO DEMO -->
+        <section class="d-section d-section--video">
+            <h2 class="d-video-heading">Watch Demo</h2>
+            <div class="d-video-embed">
+                <iframe src="https://www.youtube.com/embed/B5DM8hax3Fw?si=KDpTQxNPzZs2u3nO" title="TextLab Pro - Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- INTRO SECTION -->
+        <section class="d-intro">
+            <div class="d-intro__content d-showcase__section" data-direction="center">
+                <h2 class="d-intro__title">
+                    <span class="d-intro__title-text">TextLab</span>
+                    <span class="d-intro__title-pro">Pro</span>
+                </h2>
+                <p class="d-intro__desc">The all-in-one text toolkit for After Effects. Quality checks, batch operations, and professional styling — everything you need in one panel.</p>
+            </div>
+        </section>
+
+        <!-- SHOWCASE - Apple Style (3 Tabs) -->
+        <section class="d-section d-section--showcase">
+            <div class="d-showcase">
+
+                <!-- Section 1: Quality Tab -->
+                <div class="d-showcase__section" data-direction="left">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/textlab-quality.png" alt="Quality Tab">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge">Quality Tab</div>
+                        <h3 class="d-showcase__title">Analyze and optimize your text</h3>
+                        <p class="d-showcase__desc">Comprehensive quality checks for broadcast and social media. Catch problems before they reach your audience.</p>
+                        <ul class="d-showcase__features">
+                            <li>Safe Zone Overlay (YouTube, TikTok, Instagram)</li>
+                            <li>WCAG Contrast Checker with color picker</li>
+                            <li>Resolution Compatibility analysis</li>
+                            <li>Font Manager with batch replace</li>
+                            <li>Export detailed QC reports</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 2: Operations Tab -->
+                <div class="d-showcase__section" data-direction="right">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/textlab-operations.png" alt="Operations Tab">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge">Operations Tab</div>
+                        <h3 class="d-showcase__title">Fix issues in seconds</h3>
+                        <p class="d-showcase__desc">Batch operations that save hours of manual work. Apply fixes to all text layers with one click.</p>
+                        <ul class="d-showcase__features">
+                            <li>Case Converter (UPPER, lower, Title)</li>
+                            <li>Reset Scale & Center Anchors</li>
+                            <li>Fit Comp to Text bounds</li>
+                            <li>Trim Whitespace & Find Placeholders</li>
+                            <li>Fix All Issues — one button</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 3: Styling Tab -->
+                <div class="d-showcase__section" data-direction="left">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/textlab-styling.png" alt="Styling Tab">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge">Styling Tab</div>
+                        <h3 class="d-showcase__title">Creative text effects</h3>
+                        <p class="d-showcase__desc">Professional animations and effects without writing expressions. Live preview everything before applying.</p>
+                        <ul class="d-showcase__features">
+                            <li>15+ Text Animations with FFX presets</li>
+                            <li>Style Sync across multiple layers</li>
+                            <li>Multi-Outline with custom colors</li>
+                            <li>Per-Character Color effects</li>
+                            <li>Stroke Reveal animation</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="d-section d-section--video">
+            <h2 class="d-video-heading">Watch Tutorial</h2>
+            <div class="d-video-embed">
+                <iframe src="https://www.youtube.com/embed/wGdaotsuyGc?si=0z_d4-360YsrdPEO" title="TextLab Pro - Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="d-cta">
+            <div class="d-cta__box" style="--line:linear-gradient(90deg,transparent,#9999FF,#FF6AC1,transparent);">
+                <h2>Transform your text workflow</h2>
+                <p>One-time purchase. Free updates. No subscription.</p>
+                <div class="d-cta__price" style="color:#9999FF;">$39 <span>USD</span></div>
+                <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+                                        <a href="https://aescripts.com/textlab-pro/" target="_blank" class="btn btn--aescripts btn--sale"><span class="sale-badge">SALE</span><img src="assets/images/aescripts-logo.png" alt="aescripts">Buy on aescripts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Guide Link -->
+        <div class="d-install-link">
+            <span class="d-install-link__icon">📦</span>
+            <span class="d-install-link__text">Need help installing?</span>
+            <span class="d-install-link__btn" onclick="showPage('install')">View Installation Guide →</span>
+        </div>
+
+        <div class="d-footer"><span onclick="goHome()" style="cursor:pointer;">← Back to YCraft</span> · © 2026 YCraft</div>
+    </div>
+
+    <!-- EXPRESSIONKIT DETAIL PAGE -->
+    <div id="pg-expressionkit" class="detail-page" style="display:none;">
+        <section class="d-hero">
+            <div class="d-hero__content">
+                <div class="d-badge" style="color:#5DE8B2;border-color:rgba(93,232,178,0.2);background:rgba(93,232,178,0.05);">
+                    <span class="d-badge__dot" style="background:#5DE8B2;box-shadow:0 0 8px #5DE8B2;"></span> Coming Soon
+                </div>
+                <h1 class="d-hero__title">The ultimate<br><span style="color:#5DE8B2;text-shadow:0 0 30px rgba(93,232,178,0.25);">expression toolkit</span></h1>
+                <p class="d-hero__desc">Snippet management, search, real-time debugging, and performance analysis — write better expressions, faster.</p>
+                <div class="d-hero__actions">
+                    <span class="btn btn--ghost" style="border-color:rgba(93,232,178,0.25);color:#5DE8B2;cursor:default;opacity:0.7;">Coming Soon</span>
+                </div>
+            </div>
+            <div class="d-hero__visual">
+                <div class="d-hero__image-wrap" style="--glow-color:rgba(93,232,178,0.15);">
+                    <img src="assets/images/expression-placeholder-1.svg" alt="ExpressionKit Panel" class="d-hero__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO SECTION -->
+        <section class="d-intro">
+            <div class="d-intro__content d-showcase__section" data-direction="center">
+                <h2 class="d-intro__title">
+                    <span class="d-intro__title-text" style="background:linear-gradient(135deg,#5DE8B2 0%,#00D4FF 100%);-webkit-background-clip:text;background-clip:text;">Expression</span>
+                    <span class="d-intro__title-pro">Kit</span>
+                </h2>
+                <p class="d-intro__desc">The complete expression toolkit for After Effects. Library management, smart search, real-time debugging, and performance analysis — all in one panel.</p>
+            </div>
+        </section>
+
+        <!-- SHOWCASE - Apple Style -->
+        <section class="d-section d-section--showcase">
+            <div class="d-showcase d-showcase--expression">
+
+                <!-- Section 1: Library -->
+                <div class="d-showcase__section" data-direction="left">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/expression-placeholder-1.svg" alt="Library View">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge" style="background:rgba(93,232,178,0.1);border-color:rgba(93,232,178,0.25);color:#5DE8B2;">Snippet Library</div>
+                        <h3 class="d-showcase__title" style="background:linear-gradient(135deg,#5DE8B2,#00D4FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">100+ ready-to-use expressions</h3>
+                        <p class="d-showcase__desc">Curated library of professional expressions. Search, preview, and apply with one click.</p>
+                        <ul class="d-showcase__features">
+                            <li style="--check-bg:rgba(93,232,178,0.1);--check-color:#5DE8B2;">Built-in snippet collection</li>
+                            <li style="--check-bg:rgba(93,232,178,0.1);--check-color:#5DE8B2;">Custom library support</li>
+                            <li style="--check-bg:rgba(93,232,178,0.1);--check-color:#5DE8B2;">Tag-based organization</li>
+                            <li style="--check-bg:rgba(93,232,178,0.1);--check-color:#5DE8B2;">One-click apply to properties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 2: Editor -->
+                <div class="d-showcase__section" data-direction="right">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/expression-placeholder-2.svg" alt="Editor View">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge" style="background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.25);color:#00D4FF;">Smart Editor</div>
+                        <h3 class="d-showcase__title" style="background:linear-gradient(135deg,#00D4FF,#9999FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Write expressions faster</h3>
+                        <p class="d-showcase__desc">Modern code editor with syntax highlighting, auto-completion, and inline documentation.</p>
+                        <ul class="d-showcase__features">
+                            <li style="--check-bg:rgba(0,212,255,0.1);--check-color:#00D4FF;">Syntax highlighting</li>
+                            <li style="--check-bg:rgba(0,212,255,0.1);--check-color:#00D4FF;">Auto-completion</li>
+                            <li style="--check-bg:rgba(0,212,255,0.1);--check-color:#00D4FF;">Bracket matching</li>
+                            <li style="--check-bg:rgba(0,212,255,0.1);--check-color:#00D4FF;">Inline documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 3: Debug -->
+                <div class="d-showcase__section" data-direction="left">
+                    <div class="d-showcase__visual">
+                        <img src="assets/images/expression-placeholder-3.svg" alt="Debug Console">
+                    </div>
+                    <div class="d-showcase__content">
+                        <div class="d-showcase__badge" style="background:rgba(210,145,255,0.1);border-color:rgba(210,145,255,0.25);color:#D291FF;">Debug Console</div>
+                        <h3 class="d-showcase__title" style="background:linear-gradient(135deg,#D291FF,#FF6AC1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Find bugs instantly</h3>
+                        <p class="d-showcase__desc">Real-time debugging with variable inspection, breakpoints, and performance profiling.</p>
+                        <ul class="d-showcase__features">
+                            <li style="--check-bg:rgba(210,145,255,0.1);--check-color:#D291FF;">Variable inspection</li>
+                            <li style="--check-bg:rgba(210,145,255,0.1);--check-color:#D291FF;">Breakpoint support</li>
+                            <li style="--check-bg:rgba(210,145,255,0.1);--check-color:#D291FF;">Performance profiler</li>
+                            <li style="--check-bg:rgba(210,145,255,0.1);--check-color:#D291FF;">Error highlighting</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="d-cta">
+            <div class="d-cta__box" style="--line:linear-gradient(90deg,transparent,#5DE8B2,#00D4FF,transparent);">
+                <h2>Be the first to know</h2>
+                <p>ExpressionKit is in active development.</p>
+                <div class="d-cta__price" style="color:#5DE8B2;">Coming Soon</div>
+                <span class="btn btn--ghost" style="border-color:rgba(93,232,178,0.25);color:#5DE8B2;cursor:default;opacity:0.7;">Coming Soon</span>
+            </div>
+        </section>
+
+        <!-- Installation Guide Link -->
+        <div class="d-install-link">
+            <span class="d-install-link__icon">📦</span>
+            <span class="d-install-link__text">Need help installing?</span>
+            <span class="d-install-link__btn" onclick="showPage('install')">View Installation Guide →</span>
+        </div>
+
+        <div class="d-footer"><span onclick="goHome()" style="cursor:pointer;">← Back to YCraft</span> · © 2026 YCraft</div>
+    </div>
+
+    <!-- INSTALLATION GUIDE PAGE -->
+    <div id="pg-install" class="detail-page" style="display:none;">
+        <section class="d-hero d-hero--compact">
+            <div class="d-hero__content" style="max-width:100%;text-align:center;">
+                <div class="d-badge" style="color:#00D4FF;border-color:rgba(0,212,255,0.2);background:rgba(0,212,255,0.05);">
+                    <span class="d-badge__dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span> Step-by-Step Guide
+                </div>
+                <h1 class="d-hero__title" style="font-size:clamp(32px,5vw,48px);">How to Install<br><span style="color:#00D4FF;text-shadow:0 0 30px rgba(0,212,255,0.25);">YCraft Extensions</span></h1>
+                <p class="d-hero__desc" style="max-width:600px;margin:0 auto;">Follow these simple steps to install CEP extensions and JSX scripts in After Effects. Choose your operating system below.</p>
+            </div>
+        </section>
+
+        <!-- OS Selection Tabs -->
+        <section class="install-guide">
+            <div class="install-tabs">
+                <button class="install-tab install-tab--active" onclick="showInstallTab('windows')" id="tabWindows">
+                    <span class="install-tab__icon">🖥️</span> Windows
+                </button>
+                <button class="install-tab" onclick="showInstallTab('mac')" id="tabMac">
+                    <span class="install-tab__icon">🍎</span> macOS
+                </button>
+            </div>
+
+            <!-- Windows Instructions -->
+            <div class="install-content" id="installWindows">
+                <div class="install-section">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#00D4FF,#31A8FF);">1</span>
+                        <h3 class="install-section__title">Download ZXP Installer</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>ZXP Installer is a free tool that installs Adobe extensions with one click.</p>
+                        <a href="https://aescripts.com/learn/zxp-installer/" target="_blank" class="install-btn">
+                            <span class="install-btn__icon">⬇️</span>
+                            Download ZXP Installer (Free)
+                        </a>
+                        <div class="install-note">
+                            <span class="install-note__icon">💡</span>
+                            Choose "ZXP Installer" for Windows from the download page.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="install-section">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#9999FF,#D291FF);">2</span>
+                        <h3 class="install-section__title">Install ZXP Installer</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>Run the downloaded installer and follow the prompts. It's a simple next-next-finish process.</p>
+                        <div class="install-steps">
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Run the .exe file
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Click "Install" when prompted
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Wait for completion
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="install-section">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#5DE8B2,#00D4FF);">3</span>
+                        <h3 class="install-section__title">Install Your Extension</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>Open ZXP Installer and drag your .zxp file into the window. That's it!</p>
+                        <div class="install-steps">
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Open ZXP Installer
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Drag the .zxp file into the window
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Wait for "Installation Complete"
+                            </div>
+                        </div>
+                        <div class="install-note install-note--success">
+                            <span class="install-note__icon">🎉</span>
+                            Restart After Effects and find your extension under Window → Extensions
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JSX Scripts Section -->
+                <div class="install-section install-section--alt">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#E8D44D,#FF9E64);">⚡</span>
+                        <h3 class="install-section__title">Installing JSX Scripts (like STRUCT)</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>JSX scripts don't need ZXP Installer. Just copy the file to the right folder:</p>
+                        <div class="install-path">
+                            <code>C:\Program Files\Adobe\Adobe After Effects [version]\Support Files\Scripts\ScriptUI Panels</code>
+                        </div>
+                        <div class="install-steps">
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Download the .jsx or .jsxbin file
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Copy to ScriptUI Panels folder
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Restart After Effects
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Find under Window → [Script Name]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mac Instructions -->
+            <div class="install-content" id="installMac" style="display:none;">
+                <div class="install-section">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#00D4FF,#31A8FF);">1</span>
+                        <h3 class="install-section__title">Download ZXP Installer</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>ZXP Installer is a free tool that installs Adobe extensions with one click.</p>
+                        <a href="https://aescripts.com/learn/zxp-installer/" target="_blank" class="install-btn">
+                            <span class="install-btn__icon">⬇️</span>
+                            Download ZXP Installer (Free)
+                        </a>
+                        <div class="install-note">
+                            <span class="install-note__icon">💡</span>
+                            Choose "ZXP Installer" for macOS from the download page.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="install-section">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#9999FF,#D291FF);">2</span>
+                        <h3 class="install-section__title">Install ZXP Installer</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>Open the downloaded .dmg file and drag the app to your Applications folder.</p>
+                        <div class="install-steps">
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Open the .dmg file
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Drag to Applications folder
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Right-click → Open (first time only)
+                            </div>
+                        </div>
+                        <div class="install-note">
+                            <span class="install-note__icon">🍎</span>
+                            macOS may ask for permission. Click "Open" to allow.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="install-section">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#5DE8B2,#00D4FF);">3</span>
+                        <h3 class="install-section__title">Install Your Extension</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>Open ZXP Installer and drag your .zxp file into the window. That's it!</p>
+                        <div class="install-steps">
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Open ZXP Installer from Applications
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Drag the .zxp file into the window
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Enter your password if asked
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Wait for "Installation Complete"
+                            </div>
+                        </div>
+                        <div class="install-note install-note--success">
+                            <span class="install-note__icon">🎉</span>
+                            Restart After Effects and find your extension under Window → Extensions
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JSX Scripts Section -->
+                <div class="install-section install-section--alt">
+                    <div class="install-section__header">
+                        <span class="install-section__number" style="background:linear-gradient(135deg,#E8D44D,#FF9E64);">⚡</span>
+                        <h3 class="install-section__title">Installing JSX Scripts (like STRUCT)</h3>
+                    </div>
+                    <div class="install-section__body">
+                        <p>JSX scripts don't need ZXP Installer. Just copy the file to the right folder:</p>
+                        <div class="install-path">
+                            <code>/Applications/Adobe After Effects [version]/Scripts/ScriptUI Panels</code>
+                        </div>
+                        <div class="install-steps">
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Download the .jsx or .jsxbin file
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Copy to ScriptUI Panels folder
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Restart After Effects
+                            </div>
+                            <div class="install-step">
+                                <span class="install-step__check">✓</span>
+                                Find under Window → [Script Name]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="install-trouble">
+                <h3 class="install-trouble__title">🔧 Troubleshooting</h3>
+                <div class="install-trouble__grid">
+                    <div class="install-trouble__item">
+                        <div class="install-trouble__q">Extension not showing up?</div>
+                        <div class="install-trouble__a">Make sure After Effects is completely closed during installation, then restart it.</div>
+                    </div>
+                    <div class="install-trouble__item">
+                        <div class="install-trouble__q">Script won't run?</div>
+                        <div class="install-trouble__a">Go to Edit → Preferences → Scripting & Expressions → Enable "Allow Scripts to Write Files"</div>
+                    </div>
+                    <div class="install-trouble__item">
+                        <div class="install-trouble__q">Need more help?</div>
+                        <div class="install-trouble__a">Contact us at <a href="mailto:hello@ycraft.dev" style="color:#00D4FF;">hello@ycraft.dev</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-footer"><span onclick="goHome()" style="cursor:pointer;">← Back to YCraft</span> · © 2026 YCraft</div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
