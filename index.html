@@ -168,6 +168,19 @@
         </div>
     </section>
 
+    <!-- Live Fluid Demo -->
+    <section class="fluid-demo reveal" style="padding:60px 5% 40px; max-width:1400px; margin:0 auto;">
+        <div class="section-header reveal" style="margin-bottom:32px;">
+            <div class="section-header__label" style="color:#00D4FF;text-shadow:0 0 20px rgba(0,212,255,0.3);">// Live Demo</div>
+            <h2 class="section-header__title">Try <span style="background:linear-gradient(135deg,#00D4FF,#FF6AC1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Fluid</span> in your browser</h2>
+            <p class="section-header__desc">A taste of the real plugin — running live on your GPU.</p>
+        </div>
+        <div style="background:#050616; border-radius:18px; border:1px solid rgba(0,212,255,0.15); box-shadow:0 25px 80px rgba(0,0,0,0.5),0 0 80px rgba(0,212,255,0.1); overflow:hidden;">
+            <iframe src="fluid-demo.html" style="display:block; width:100%; height:600px; border:0;" loading="lazy"></iframe>
+        </div>
+        <p style="text-align:center; color:#888; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-top:16px;">Click and drag to paint</p>
+    </section>
+
     <!-- Products -->
     <section class="products" id="products">
         <div class="section-header reveal">
@@ -208,6 +221,46 @@
                 <div class="product-card__stores">
                     <span>Available on</span>
                     <img src="assets/images/gumroad-logo.png" alt="Gumroad">
+                </div>
+            </div>
+        </div>
+
+        <!-- Fluid (Plugin) -->
+        <div class="product-card product-card--fluid" data-direction="left">
+            <span class="product-card__type product-card__type--extension" style="background:rgba(0,212,255,0.1);color:#00D4FF;border-color:rgba(0,212,255,0.3);box-shadow:0 0 20px rgba(0,212,255,0.2);">Plugin</span>
+            <div class="product-card__visual product-card__visual--fluid">
+                <div class="product-card__icon-wrap">
+                    <div class="product-card__icon-glow" style="background: var(--accent-fluid);"></div>
+                    <img src="assets/images/fluid/hero-card.jpg" alt="Fluid Plugin" class="product-card__image" style="max-width:380px;border-color:rgba(0,212,255,0.2);box-shadow:0 25px 80px rgba(0,0,0,0.5),0 0 80px rgba(0,212,255,0.15);">
+                </div>
+            </div>
+            <div class="product-card__content">
+                <div class="product-card__version">v1.0 — GPU Fluid Simulation</div>
+                <h3 class="product-card__name" style="color:#00D4FF;">Fluid</h3>
+                <p class="product-card__tagline">
+                    Real-time GPU-accelerated fluid simulation for After Effects. Smoke, fire, ink — driven by your source layers, no third-party render engine required.
+                </p>
+                <ul class="product-card__features">
+                    <li>Real Navier-Stokes solver on GPU (OpenCL)</li>
+                    <li>Source Layer emission — fluid from any logo or text</li>
+                    <li>2-point emitter with velocity tracking</li>
+                    <li>Dual-resolution dye (up to Extreme 4608²)</li>
+                    <li>Volumetric shading, bloom & color mixing</li>
+                </ul>
+                <div class="product-card__footer">
+                    <div class="product-card__price">
+                        <div class="product-card__price-wrap">
+                            <span class="product-card__price-old">$59.99</span>
+                            <span class="product-card__price-sale">$49.99</span>
+                            <span class="product-card__sale-badge">Launch Sale</span>
+                        </div>
+                        <span class="product-card__price-note">USD · one-time</span>
+                    </div>
+                    <span class="btn" onclick="showPage('fluid');" style="cursor:pointer;background:var(--accent-fluid);color:#000;">Get Fluid →</span>
+                </div>
+                <div class="product-card__stores">
+                    <span>Available on</span>
+                    <img src="assets/images/aescripts-logo.png" alt="aescripts+aeplugins" class="store-logo--primary">
                 </div>
             </div>
         </div>
@@ -284,45 +337,6 @@
             </div>
         </div>
 
-        <!-- Fluid (Plugin) -->
-        <div class="product-card product-card--fluid product-card--reverse" data-direction="right">
-            <span class="product-card__type product-card__type--extension product-card__type--left" style="background:rgba(0,212,255,0.1);color:#00D4FF;border-color:rgba(0,212,255,0.3);box-shadow:0 0 20px rgba(0,212,255,0.2);">Plugin</span>
-            <div class="product-card__visual product-card__visual--fluid">
-                <div class="product-card__icon-wrap">
-                    <div class="product-card__icon-glow" style="background: var(--accent-fluid);"></div>
-                    <img src="assets/images/fluid/hero-card.jpg" alt="Fluid Plugin" class="product-card__image" style="max-width:380px;border-color:rgba(0,212,255,0.2);box-shadow:0 25px 80px rgba(0,0,0,0.5),0 0 80px rgba(0,212,255,0.15);">
-                </div>
-            </div>
-            <div class="product-card__content">
-                <div class="product-card__version">v1.0 — GPU Fluid Simulation</div>
-                <h3 class="product-card__name" style="color:#00D4FF;">Fluid</h3>
-                <p class="product-card__tagline">
-                    Real-time GPU-accelerated fluid simulation for After Effects. Smoke, fire, ink — driven by your source layers, no third-party render engine required.
-                </p>
-                <ul class="product-card__features">
-                    <li>Real Navier-Stokes solver on GPU (OpenCL)</li>
-                    <li>Source Layer emission — fluid from any logo or text</li>
-                    <li>2-point emitter with velocity tracking</li>
-                    <li>Dual-resolution dye (up to Extreme 4608²)</li>
-                    <li>Volumetric shading, bloom & color mixing</li>
-                </ul>
-                <div class="product-card__footer">
-                    <div class="product-card__price">
-                        <div class="product-card__price-wrap">
-                            <span class="product-card__price-old">$59.99</span>
-                            <span class="product-card__price-sale">$49.99</span>
-                            <span class="product-card__sale-badge">Launch Sale</span>
-                        </div>
-                        <span class="product-card__price-note">USD · one-time</span>
-                    </div>
-                    <span class="btn" onclick="showPage('fluid');" style="cursor:pointer;background:var(--accent-fluid);color:#000;">Get Fluid →</span>
-                </div>
-                <div class="product-card__stores">
-                    <span>Available on</span>
-                    <img src="assets/images/aescripts-logo.png" alt="aescripts+aeplugins" class="store-logo--primary">
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- About -->
