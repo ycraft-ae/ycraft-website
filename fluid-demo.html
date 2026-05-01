@@ -28,7 +28,7 @@
         position: absolute;
         top: 50%; left: 50%;
         transform: translate(-50%, -50%);
-        max-width: 90%; max-height: 70%;
+        max-width: 90%; max-height: 78%;
         pointer-events: none;
         user-select: none; -webkit-user-drag: none;
         z-index: 10;
@@ -73,8 +73,8 @@
     const BLOOM_RES = 256;
     const PRESSURE_ITER = 12;
 
-    const EMIT_RADIUS_DYE  = 0.00100;
-    const EMIT_RADIUS_VEL  = 0.00180;
+    const EMIT_RADIUS_DYE  = 0.00135;
+    const EMIT_RADIUS_VEL  = 0.00240;
     const FORCE_SCALE      = 3500.0;
     const DYE_INTENSITY    = 1.8;
     const DYE_ALPHA_ADD    = 0.475;
@@ -844,7 +844,7 @@
         const logoAspect   = logoImg.naturalWidth / logoImg.naturalHeight;
 
         let boxW = canvas.clientWidth * 0.90;
-        let boxH = canvas.clientHeight * 0.70;
+        let boxH = canvas.clientHeight * 0.78;
         let lW, lH;
         if (logoAspect > boxW / boxH) { lW = boxW; lH = boxW / logoAspect; }
         else                           { lH = boxH; lW = boxH * logoAspect; }
