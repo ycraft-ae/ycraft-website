@@ -8,7 +8,7 @@ function showPage(id) {
         struct: { t:'STRUCT v1.2.0', c:'Buy — $29', l:'#' },
         textflow: { t:'TextLab Pro v1.0', c:'Buy — $29.25', l:'https://aescripts.com/textlab-pro/' },
         expressionkit: { t:'ExpressionKit', c:'Coming Soon', l:'#' },
-        fluid: { t:'Fluid v1.0', c:'Buy — $49.99', l:'https://aescripts.com/' },
+        fluid: { t:'Fluid v1.0', c:'Buy — $49.99', l:'https://aescripts.com/fluid/' },
         install: { t:'Installation Guide', c:'Back to Home', l:'javascript:goHome()' }
     };
     var p = info[id];
