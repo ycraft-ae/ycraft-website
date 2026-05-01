@@ -8,6 +8,7 @@ function showPage(id) {
         struct: { t:'STRUCT v1.2.0', c:'Buy — $29', l:'#' },
         textflow: { t:'TextLab Pro v1.0', c:'Buy — $29.25', l:'https://aescripts.com/textlab-pro/' },
         expressionkit: { t:'ExpressionKit', c:'Coming Soon', l:'#' },
+        fluid: { t:'Fluid v1.0', c:'Buy — $49.99', l:'https://aescripts.com/' },
         install: { t:'Installation Guide', c:'Back to Home', l:'javascript:goHome()' }
     };
     var p = info[id];
@@ -15,6 +16,7 @@ function showPage(id) {
     var cta = document.getElementById('navDetailCta');
     cta.textContent = p.c; cta.href = p.l;
     if (id === 'expressionkit') { cta.style.cssText = 'background:rgba(93,232,178,0.08);color:#5DE8B2;border:1px solid rgba(93,232,178,0.2);padding:8px 20px;border-radius:100px;font-weight:600;font-size:13px;text-decoration:none;'; }
+    else if (id === 'fluid') { cta.style.cssText = 'background:rgba(0,212,255,0.1);color:#00D4FF;border:1px solid rgba(0,212,255,0.3);padding:8px 20px;border-radius:100px;font-weight:600;font-size:13px;text-decoration:none;'; }
     else if (id === 'install') { cta.style.cssText = 'background:rgba(0,212,255,0.08);color:#00D4FF;border:1px solid rgba(0,212,255,0.2);padding:8px 20px;border-radius:100px;font-weight:600;font-size:13px;text-decoration:none;cursor:pointer;'; cta.removeAttribute('href'); cta.onclick = goHome; }
     else { cta.style.cssText = ''; cta.onclick = null; }
     window.scrollTo(0, 0);

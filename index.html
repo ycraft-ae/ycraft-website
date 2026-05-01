@@ -89,6 +89,7 @@
         <!-- Home nav -->
         <ul class="nav__links" id="navHome">
             <li><a href="#products">Products</a></li>
+            <li><a href="#" onclick="showPage('fluid');return false;" style="color:#00D4FF;">Fluid</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -275,6 +276,46 @@
                         <span class="product-card__price-note">USD</span>
                     </div>
                     <span class="btn btn--expression" onclick="showPage('expressionkit')" style="cursor:pointer;">Get ExpressionKit →</span>
+                </div>
+                <div class="product-card__stores">
+                    <span>Available on</span>
+                    <img src="assets/images/aescripts-logo.png" alt="aescripts+aeplugins" class="store-logo--primary">
+                </div>
+            </div>
+        </div>
+
+        <!-- Fluid (Plugin) -->
+        <div class="product-card product-card--fluid product-card--reverse" data-direction="right">
+            <span class="product-card__type product-card__type--extension product-card__type--left" style="background:rgba(0,212,255,0.1);color:#00D4FF;border-color:rgba(0,212,255,0.3);box-shadow:0 0 20px rgba(0,212,255,0.2);">Plugin</span>
+            <div class="product-card__visual product-card__visual--fluid">
+                <div class="product-card__icon-wrap">
+                    <div class="product-card__icon-glow" style="background: var(--accent-fluid);"></div>
+                    <img src="assets/images/fluid/hero-card.jpg" alt="Fluid Plugin" class="product-card__image" style="max-width:380px;border-color:rgba(0,212,255,0.2);box-shadow:0 25px 80px rgba(0,0,0,0.5),0 0 80px rgba(0,212,255,0.15);">
+                </div>
+            </div>
+            <div class="product-card__content">
+                <div class="product-card__version">v1.0 — GPU Fluid Simulation</div>
+                <h3 class="product-card__name" style="color:#00D4FF;">Fluid</h3>
+                <p class="product-card__tagline">
+                    Real-time GPU-accelerated fluid simulation for After Effects. Smoke, fire, ink — driven by your source layers, no third-party render engine required.
+                </p>
+                <ul class="product-card__features">
+                    <li>Real Navier-Stokes solver on GPU (OpenCL)</li>
+                    <li>Source Layer emission — fluid from any logo or text</li>
+                    <li>2-point emitter with velocity tracking</li>
+                    <li>Dual-resolution dye (up to Extreme 4608²)</li>
+                    <li>Volumetric shading, bloom & color mixing</li>
+                </ul>
+                <div class="product-card__footer">
+                    <div class="product-card__price">
+                        <div class="product-card__price-wrap">
+                            <span class="product-card__price-old">$59.99</span>
+                            <span class="product-card__price-sale">$49.99</span>
+                            <span class="product-card__sale-badge">Launch Sale</span>
+                        </div>
+                        <span class="product-card__price-note">USD · one-time</span>
+                    </div>
+                    <span class="btn" onclick="showPage('fluid');" style="cursor:pointer;background:var(--accent-fluid);color:#000;">Get Fluid →</span>
                 </div>
                 <div class="product-card__stores">
                     <span>Available on</span>
@@ -831,6 +872,169 @@
                 <p>One-time purchase. Free updates. No subscription.</p>
                 <div class="d-cta__price" style="color:#5DE8B2;">$39 <span>USD</span></div>
                 <a href="https://aescripts.com/expression-kit/" target="_blank" class="btn btn--aescripts btn--aescripts-primary"><img src="assets/images/aescripts-logo.png" alt="aescripts">Buy on aescripts</a>
+            </div>
+        </section>
+
+        <!-- Installation Guide Link -->
+        <div class="d-install-link">
+            <span class="d-install-link__icon">📦</span>
+            <span class="d-install-link__text">Need help installing?</span>
+            <span class="d-install-link__btn" onclick="showPage('install')">View Installation Guide →</span>
+        </div>
+
+        <div class="d-footer"><span onclick="goHome()" style="cursor:pointer;">← Back to YCraft</span> · © 2026 YCraft</div>
+    </div>
+
+    <!-- FLUID DETAIL PAGE -->
+    <div id="pg-fluid" class="detail-page" style="display:none;">
+        <section class="d-hero">
+            <div class="d-hero__content">
+                <div class="d-badge" style="color:#00D4FF;border-color:rgba(0,212,255,0.25);background:rgba(0,212,255,0.05);">
+                    <span class="d-badge__dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span> v1.0 • Available
+                </div>
+                <h1 class="d-hero__title">Real-time<br><span style="color:#00D4FF;text-shadow:0 0 30px rgba(0,212,255,0.3);">GPU fluid simulation</span></h1>
+                <p class="d-hero__desc">A native After Effects plugin that renders true Navier-Stokes fluid on your GPU. Use any layer as a source — logos, text, masks — and watch them dissolve into smoke, ink, or fire.</p>
+                <div class="d-hero__actions">
+                    <div class="d-cta__price-wrap" style="margin:0 0 18px;">
+                        <span class="d-cta__price-old">$59.99</span>
+                        <span class="d-cta__price" style="color:#00D4FF;font-size:38px;">$49.99 <span style="font-size:16px;">USD</span></span>
+                        <span class="product-card__sale-badge">Launch Sale</span>
+                    </div>
+                    <a href="https://aescripts.com/fluid/" target="_blank" class="btn btn--aescripts btn--aescripts-primary"><img src="assets/images/aescripts-logo.png" alt="aescripts">Buy on aescripts</a>
+                </div>
+            </div>
+            <div class="d-hero__visual">
+                <div class="d-hero__image-wrap d-hero__image-wrap--alpha">
+                    <img src="assets/images/fluid/02_00053.jpg" alt="Fluid Plugin" class="d-hero__image d-hero__image--alpha" style="border-radius:18px;border:1px solid rgba(0,212,255,0.15);box-shadow:0 25px 80px rgba(0,0,0,0.5),0 0 80px rgba(0,212,255,0.15);">
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO SECTION -->
+        <section class="d-intro">
+            <div class="d-intro__content d-showcase__section" data-direction="center">
+                <h2 class="d-intro__title">
+                    <span class="d-intro__title-text" style="background:linear-gradient(135deg,#00D4FF 0%,#FF6AC1 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Fluid</span>
+                </h2>
+                <p class="d-intro__desc">No particle systems. No third-party render engine. Just a real fluid solver running on your graphics card — driven entirely by your After Effects layers.</p>
+            </div>
+        </section>
+
+        <!-- GIF SHOWCASE GRID -->
+        <section class="d-section">
+            <div class="fluid-grid">
+
+                <!-- 1. Colorful (confirmed) -->
+                <div class="fluid-grid__item fluid-grid__item--wide reveal" data-direction="left">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/Image_01.gif" alt="Colorful">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Colorful</span>
+                        <h3 class="fluid-grid__title">A full color palette, not just two tones</h3>
+                        <p class="fluid-grid__desc">Two emitter points, each with its own color and gradient mix. Cycle colors over time, randomize per-emit, or lock to a brand palette — every stream stays vibrant.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Color Mixing (confirmed) -->
+                <div class="fluid-grid__item reveal" data-direction="right">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/Image_02.gif" alt="Color Mixing">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Color Mixing</span>
+                        <h3 class="fluid-grid__title">Organic blending, not flat overlays</h3>
+                        <p class="fluid-grid__desc">Colors mix where streams collide — exactly how real ink behaves. No baked transitions, no manual gradients. Every render is unique.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Physics (confirmed) -->
+                <div class="fluid-grid__item reveal" data-direction="left">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/Image_04.gif" alt="Physics">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Physics</span>
+                        <h3 class="fluid-grid__title">Gravity, wind, buoyancy, vorticity</h3>
+                        <p class="fluid-grid__desc">Real fluid forces, not pseudo-effects. Pull plumes upward like smoke, sink them like ink in water, or add curl noise for organic detail — keyframeable per parameter.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Volume (confirmed) -->
+                <div class="fluid-grid__item reveal" data-direction="right">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/Image_05.gif" alt="Volume">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Volume</span>
+                        <h3 class="fluid-grid__title">Density-driven shading and bloom</h3>
+                        <p class="fluid-grid__desc">Specular and rim lighting modulated by fluid density, plus a multi-pass bloom. The result reads as volume on screen — even though it renders flat in the comp.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Source Layer -->
+                <div class="fluid-grid__item fluid-grid__item--wide reveal" data-direction="left">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/key.gif" alt="Source Layer">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Source Layer</span>
+                        <h3 class="fluid-grid__title">Any layer becomes an emitter</h3>
+                        <p class="fluid-grid__desc">Drop in a logo, a text layer, or a shape — Fluid reads its alpha and emits from every visible pixel. Animate the source's transform and the fluid follows, with proper edge normals and velocity tracking.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Turbulence -->
+                <div class="fluid-grid__item reveal" data-direction="left">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/Image_07.gif" alt="Turbulence">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Turbulence</span>
+                        <h3 class="fluid-grid__title">Procedural detail, no extra renders</h3>
+                        <p class="fluid-grid__desc">Layered curl noise injects micro-detail into every frame. Tune the amount, scale, and speed to push smoke from clean and cinematic to chaotic and organic.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Quality -->
+                <div class="fluid-grid__item reveal" data-direction="right">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/Image_08.gif" alt="Quality">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Quality</span>
+                        <h3 class="fluid-grid__title">Standard to Extreme — your call</h3>
+                        <p class="fluid-grid__desc">Four quality presets push the dye grid up to 4608² for hero shots while keeping previews fast. SSAA 2× and bicubic resampling clean up every edge.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Real-time GPU -->
+                <div class="fluid-grid__item fluid-grid__item--wide reveal" data-direction="left">
+                    <div class="fluid-grid__media">
+                        <img src="assets/images/fluid/Image_09.gif" alt="Real-time GPU">
+                    </div>
+                    <div class="fluid-grid__caption">
+                        <span class="fluid-grid__badge">Real-time GPU</span>
+                        <h3 class="fluid-grid__title">OpenCL solver, no plug-in stack</h3>
+                        <p class="fluid-grid__desc">Seven hand-tuned GPU kernels run the entire pipeline — inject, advect, divergence, pressure, gradient, render. Scrub the timeline and watch the simulation respond instantly.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="d-cta">
+            <div class="d-cta__box" style="--line:linear-gradient(90deg,transparent,#00D4FF,#FF6AC1,transparent);">
+                <h2>Real fluid, native to After Effects</h2>
+                <p>One-time purchase. Free updates. No subscription.</p>
+                <div class="d-cta__price-wrap">
+                    <span class="d-cta__price-old">$59.99</span>
+                    <span class="d-cta__price" style="color:#00D4FF;">$49.99 <span>USD</span></span>
+                    <span class="product-card__sale-badge">Launch Sale</span>
+                </div>
+                <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://aescripts.com/fluid/" target="_blank" class="btn btn--aescripts"><img src="assets/images/aescripts-logo.png" alt="aescripts">Buy on aescripts</a>
+                </div>
             </div>
         </section>
 

@@ -21,6 +21,8 @@
     --accent-textflow-glow: rgba(153, 153, 255, 0.2);
     --accent-expression: #5DE8B2;
     --accent-expression-glow: rgba(93, 232, 178, 0.2);
+    --accent-fluid: #00D4FF;
+    --accent-fluid-glow: rgba(0, 212, 255, 0.2);
     --accent-brand: #00D4FF;
     --radius-sm: 8px;
     --radius-md: 14px;
@@ -755,6 +757,21 @@ body {
     border-color: rgba(93, 232, 178, 0.2);
     transform: translateY(-4px);
     box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 40px rgba(93, 232, 178, 0.05);
+}
+
+.product-card--fluid:hover {
+    border-color: rgba(0, 212, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 40px rgba(0, 212, 255, 0.08);
+}
+
+.product-card__visual--fluid {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(255, 106, 193, 0.04), transparent);
+}
+
+.product-card--fluid .product-card__features li::before {
+    background: var(--accent-fluid);
+    box-shadow: 0 0 6px var(--accent-fluid);
 }
 
 .product-card--reverse {
@@ -2981,5 +2998,166 @@ kbd {
 
     .install-path code {
         font-size: 11px;
+    }
+}
+
+/* ═══════════════════════════ FLUID PRODUCT — SALE PRICE ═══════════════════════════ */
+
+.product-card__price-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.product-card__price-old {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    position: relative;
+    opacity: 0.7;
+}
+.product-card__price-old::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    top: 50%;
+    height: 2px;
+    background: #FF4D6D;
+    transform: translateY(-50%) rotate(-8deg);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.5);
+}
+.product-card__price-sale {
+    color: var(--accent-fluid);
+    text-shadow: 0 0 16px rgba(0, 212, 255, 0.35);
+}
+.product-card__sale-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background: linear-gradient(135deg, #FF4D6D, #FF6AC1);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    margin-left: 4px;
+    box-shadow: 0 0 14px rgba(255, 77, 109, 0.35);
+    align-self: center;
+}
+
+/* Detail page sale price (CTA box) */
+.d-cta__price-wrap {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 18px 0 24px;
+}
+.d-cta__price-old {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    position: relative;
+    opacity: 0.65;
+}
+.d-cta__price-old::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    top: 50%;
+    height: 3px;
+    background: #FF4D6D;
+    transform: translateY(-50%) rotate(-6deg);
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+}
+
+/* ═══════════════════════════ FLUID — GIF SHOWCASE GRID ═══════════════════════════ */
+
+.fluid-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+.fluid-grid__item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 212, 255, 0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+.fluid-grid__item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 212, 255, 0.25);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(0, 212, 255, 0.08);
+}
+.fluid-grid__item--wide {
+    grid-column: 1 / -1;
+}
+.fluid-grid__media {
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    display: block;
+    line-height: 0;
+}
+.fluid-grid__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.fluid-grid__caption {
+    padding: 22px 26px 26px;
+}
+.fluid-grid__badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-fluid);
+    font-family: var(--font-mono);
+    margin-bottom: 10px;
+}
+.fluid-grid__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+.fluid-grid__desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .fluid-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 40px 16px 30px;
+    }
+    .fluid-grid__caption {
+        padding: 18px 20px 22px;
+    }
+    .fluid-grid__title {
+        font-size: 19px;
     }
 }
